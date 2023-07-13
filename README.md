@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Carbon Relay
 
-## Getting Started
+Carbon Relay is an application built using the following tech stacks:
 
-First, run the development server:
+## Tech Stacks
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Frontend**: Next.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **API Testing**: Postman
+- **Hosting**: Vercel, GoDaddy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Status**
+- **Project ID**
+- **Project Name**
+- **Vintage**
+- **Offer**
+- **Bid**
+- **Share**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Flow
 
-## Learn More
+### User Registration and Authentication
 
-To learn more about Next.js, take a look at the following resources:
+- Users can register an account with the application using their email and password.
+- Implement authentication mechanisms such as JWT (JSON Web Tokens) to secure the application and protect user data.
+- Users can log in to access their personalized dashboard.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Dashboard Overview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Upon logging in, users are presented with an overview of their dashboard.
+- The dashboard displays relevant information such as the user's current status, active bids, and claimed offers.
 
-## Deploy on Vercel
+### Status Editing by Companies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Companies with appropriate permissions can edit the status of a project.
+- Implement an interface that allows companies to select a project and update its status (e.g., "In Progress," "Completed," "On Hold").
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Bidding by Individuals
+
+- Individuals can create bids for projects listed by companies.
+- Provide a form where individuals can enter details about their bid, such as the amount of carbon they are willing to offer.
+- Validate the bid data on the frontend and backend to ensure its correctness.
+
+### Offer Listing and Claiming
+
+- Companies can view the list of bids submitted by individuals for their projects.
+- Display the bid details, including the offered amount of carbon.
+- Companies can choose to accept a bid and generate an offer for the individual.
+- Individuals can view the offers made by companies and claim the ones they wish to accept.
+
+### Carbon Bidding and Transactions
+
+- Implement a mechanism for individuals to bid and offer carbon units.
+- Users can specify the amount of carbon they want to bid or offer within the application.
+- Implement transactional logic to handle the transfer of carbon units between users when bids are accepted and offers are claimed.
+
+### Static Status and Project ID
+
+- You mentioned that the status and project ID will be static.
+- Consider storing this information in your backend database or a separate configuration file.
+- Retrieve the static status and project ID when needed to display or update them in the frontend.
+
+### Social Media Sharing
+
+- Allow users to share their project statuses, bids, and offers on social media platforms to reach a wider audience.
+- Implement social media sharing buttons or links within your dashboard interface.
+- When a user clicks on a social media share button, generate a pre-populated message or post that includes relevant details about the project status, bid, or offer.
+- Integrate with social media APIs (e.g., Facebook Graph API, Twitter API) to enable users to post directly from your application.
+- Handle the authentication and authorization process with the respective social media platforms to ensure the user has the necessary permissions to post on their behalf.
+
+## Links
+
+- [GitHub](https://github.com/Block-Developers/Carbon-Relay)
